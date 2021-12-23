@@ -15,7 +15,7 @@ class PostFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence(5),
-            'content' => $this->faker->paragraph(5),
+            'content' => $this->faker->paragraph(20),
             'date' => now(),
             'type' => 'text',
         ];

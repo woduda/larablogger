@@ -12,7 +12,7 @@
                 <a href="{{ route('posts.single', $post->slug) }}">{{ $post->title }}</a>
             </h2>
             <div class="rte">
-                {!! $post->content !!}
+                {!! $post->excerpt !!}
                 <p class="readMore">
                     <a href="{{ route('posts.single', $post->slug) }}">Keep reading</a>
                 </p>
@@ -30,7 +30,7 @@
             </li>
         </ul>
         <div class="flex flex-sb">
-            <p class="date"><i class="fa fa-clock-o"></i> 1 day ago</p>
+            <p class="date"><i class="fa fa-clock-o"></i> {{ $post->date->diffForHumans() }}</p>
             <p>
                 <a href="#" class="link"><i class="fa fa-edit"></i> Edytuj</a>
             </p>
@@ -59,7 +59,7 @@
             </li>
         </ul>
         <div class="flex flex-sb">
-            <p class="date"><i class="fa fa-clock-o"></i> 1 day ago</p>
+            <p class="date"><i class="fa fa-clock-o"></i> {{ $post->date->diffForHumans() }}</p>
             <p>
                 <a href="#" class="link"><i class="fa fa-edit"></i> Edytuj</a>
             </p>
