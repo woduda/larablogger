@@ -67,8 +67,10 @@
     </div>
 </article>
 @endif
-
 @endforeach
+
+@include('partials.pagination', ['pagination' => $posts])
+
 @else
 <div class="wrapper">
     <p>Nie dodano jeszcze żadnych wpisów.</p>
